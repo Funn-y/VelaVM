@@ -27,17 +27,8 @@ enum class TOKEN_TYPE
 struct Node
 {
     NODE_TYPE type;
-    std::string payload;                          // 如果是数字，存值
-    std::unique_ptr<Node> left;                   // 左子节点
-    std::unique_ptr<Node> right;                  // 右子节点
-
-    // 构造函数：数字节点
-    Node(NODE_TYPE t, const std::string& val)
-        : type(t), payload(val), left(nullptr), right(nullptr) {}
-
-    // 构造函数：操作符节点
-    Node(NODE_TYPE t, std::unique_ptr<Node> l, std::unique_ptr<Node> r)
-        : type(t), payload(""), left(std::move(l)), right(std::move(r)) {}
+    std::string payload;
+    std::vector<Node> nodes;
 };
 
 struct Token
@@ -113,7 +104,20 @@ std::vector<Token> lexer(std::string expr)
     return out;
 }
 
+class parser
+{
+    std::vector<Token> tokens;
+    size_t index;
+public:
+    parser(std::vector<Token> input_token)
+    {
+        tokens = input_token;
+        index = 0;
+    }
 
+
+
+};
 
 int main()
 {
