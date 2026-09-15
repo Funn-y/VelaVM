@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1789197430 source:f:\velavm\velavm\main.cpp
+	<iostream>
+	<string>
+	<vector>
+	<stdexcept>
+	<cctype>
+
