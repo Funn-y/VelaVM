@@ -1,8 +1,20 @@
 # depslib dependency file v1.0
-1789197430 source:f:\velavm\velavm\main.cpp
-	<iostream>
-	<string>
+1789478912 source:f:\velavm\velavm\main.cpp
+	"VelaVM.h"
+
+1789479086 f:\velavm\velavm\include\velavm.h
+	<fstream>
 	<vector>
+	<cstdint>
+	<iterator>
+	<stdint.h>
+	<cstdlib>
+	<string>
 	<stdexcept>
-	<cctype>
+	<iostream>
+	<cstring>
+	"VMByteCode.h"
+
+1789478110 f:\velavm\velavm\include\vmbytecode.h
+	<stdint.h>
 
