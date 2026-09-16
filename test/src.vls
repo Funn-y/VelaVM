@@ -1,0 +1,5 @@
+ipushop 78
+iprint
+ipushop 0
+iret
+stop

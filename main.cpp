@@ -24,15 +24,18 @@ inline std::vector<unsigned char> read_file_bytes(const std::string& path)
     return buffer;
 }
 
-int main()
+int main(int argc, char** argv)
 {
+    if(argc < 2)
+    {
+        return 1;
+    }
+    std::string file_name = argv[1];
     try
     {
-        std::vector<unsigned char> code = vela::read_file_bytes("program.vela");
-
+        std::vector<unsigned char> code = read_file_bytes(file_name);
         vela::VelaVM vm(std::move(code));
-        int ret = vm.run();
-        std::cout << "\nreturn: " << ret << '\n';
+        return vm.run();
     }
     catch (const std::exception& e)
     {
